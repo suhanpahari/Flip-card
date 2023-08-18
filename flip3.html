@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .flip-box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .flip-box {
+    perspective: 1000px;
+    width: calc(33.33% - 40px);
+    height: 450px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flip-box-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1.25s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front, .flip-box-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  .flip-box-front {
+    background-color: #130d31;
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .flip-box-back {
+    background-color: #0a0a0a;
+    background-size: cover;
+    transform: rotateY(180deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Individual background images for each flip box */
+ #event1 .flip-box-front {
+    background-image: url('website-01.jpg');
+  }
+  
+  #event1 .flip-box-back {
+    background-image: url('website-01.jpg');
+  }
+  
+  #event2 .flip-box-front {
+    background-image: url('https://i0.wp.com/sunburn.in/wp-content/uploads/2023/08/CajWkR3Sbp1M9jB2bxlBwhlwM9GtyPUu9nXAteDt-972x597-1.jpeg?fit=972%2C597&ssl=1');
+  }
+  
+  #event2 .flip-box-back {
+    background-image: url('https://i0.wp.com/sunburn.in/wp-content/uploads/2023/08/CajWkR3Sbp1M9jB2bxlBwhlwM9GtyPUu9nXAteDt-972x597-1.jpeg?fit=972%2C597&ssl=1');
+  }
+  
+  #event3 .flip-box-front {
+    background-image: url('S1B-Goa-23-HORIZONTA2L.jpg');
+  }
+  
+  #event3 .flip-box-back {
+    background-image: url('S1B-Goa-23-HORIZONTA2L.jpg');
+  }
+  
+  h1, h2 {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="flip-box-container">
+  <div id="event1" class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h1>Event 1</h1>
+        <h2>CRUISE CONTROL 4.0</h2>
+      </div>
+      <div class="flip-box-back">
+        <h1>Event 1</h1>
+        <h2>September 23rd - 25th</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div id="event2" class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h1>Event 2</h1>
+        <h2>Sunburn Arena Ft. Armin van Buuren</h2>
+      </div>
+      <div class="flip-box-back">
+        <h1>Event 2</h1>
+        <h2>October 5th - 8th</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div id="event3" class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h1>Event 3</h1>
+        <h2>Sunburn Goa - Festival</h2>
+      </div>
+      <div class="flip-box-back">
+        <h1>Event 3</h1>
+        <h2>December 28th - 31st</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
